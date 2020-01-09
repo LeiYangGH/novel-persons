@@ -2,6 +2,8 @@
 import jieba
 import jieba.posseg as pseg
 
+#这个文件是专门用来提取姓名的，只是阶段1的代码
+
 novel_file = '平凡的世界.txt'
 family_names_file = '百家姓.txt'
 output_names_file = '所有姓名.txt'

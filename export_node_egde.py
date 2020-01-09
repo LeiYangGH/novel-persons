@@ -4,6 +4,11 @@ import jieba
 import codecs
 import jieba.posseg as pseg
 
+#这个文件是参考了网上的示例，可以导出图像数据的，当然要用三方软件才可以打开相应的文件
+#官网https://gephi.org/
+#安装后，依次文件-导入表格数据-node.csv 和 edge.csv，最后都要选 导入到当前已存在的项目里
+#有可能还需要在图像下方选 显示标签，修改标签字体和颜色，否则看不见标签内容
+
 novel_file = '平凡的世界.txt'
 family_names_file = '百家姓.txt'
 names = {}			# 姓名字典
