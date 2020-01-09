@@ -131,3 +131,5 @@ dmypy.json
 所有姓名.txt
 *swp
 *~
+*_edge.txt
+*_node.txt
