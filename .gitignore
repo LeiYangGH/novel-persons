@@ -133,3 +133,4 @@ dmypy.json
 *~
 *_edge.txt
 *_node.txt
+*.csv

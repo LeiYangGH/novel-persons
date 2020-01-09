@@ -37,14 +37,15 @@ for line in lineNames:					# 对于每一段
 				relationships[name1][name2] = relationships[name1][name2]+ 1		# 两人共同出现次数加 1
 
 # output
-with codecs.open("busan_node.txt", "a+", "utf-8") as f:
+with codecs.open("node.csv", "w", "utf-8") as f:
 	f.write("Id Label Weight\r\n")
 	for name, times in names.items():
-		f.write(name + " " + name + " " + str(times) + "\r\n")
+		if times > 20: #数字越大，导出的节点越少
+			f.write(name + " " + name + " " + str(times) + "\r\n")
 
-with codecs.open("busan_edge.txt", "a+", "utf-8") as f:
+with codecs.open("edge.csv", "w", "utf-8") as f:
 	f.write("Source Target Weight\r\n")
 	for name, edges in relationships.items():
 		for v, w in edges.items():
-			if w > 3:
+			if w > 50: #数字越大，导出的边越少
 				f.write(name + " " + v + " " + str(w) + "\r\n")
